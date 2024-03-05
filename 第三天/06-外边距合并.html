@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .damao,
+        .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 外边距合并 大的外边距会包含小的外边距 */
+        /* 所以尽量只给一个盒子设置外边距值 */
+        /* .damao {
+            margin-bottom: 100px;
+        }
+
+        .ermao {
+            margin-top: 200px;
+        }  */
+
+
+        /* 嵌套块塌陷 */
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: purple;
+            /* 第一个解决方法：给father增加一个上边框 */
+            /* border: 1px solid transparent; */
+
+            /* 第二种方法：给father增加一个内边距 */
+            /* padding: 1px; */
+
+            /* 第三种方法： */
+            overflow: hidden;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="damao">大毛</div>
+    <div class="ermao">二毛</div> -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

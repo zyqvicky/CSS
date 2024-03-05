@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            /* 透视写到被观察元素的父盒子身上 */
+            /* 透视越小，说明眼睛离得越近，说明盒子越大 */
+            /* 观察距离 */
+            perspective: 200px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transform: translateZ(0);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

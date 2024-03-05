@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left,
+        .right,
+        .test1,
+        .test2 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 设置左浮动 移动到左边=边缘 */
+            /* 浮动特性一：
+            脱标：脱离标准流 不再保留原先的位置 不在同一图层 */
+            float: left;
+
+            /* 浮动特性二：
+            所有浮动盒子都在一行内显示 且是顶端对齐
+            也页面装不下会另起一行显示 */
+        }
+
+        /* 浮动特性三：具有行内块元素性质 */
+        /* 如果行内元素有了浮动，就不需要转换为行内块元素了 */
+        /* 块级盒子没有添加宽度，默认跟父亲一样。添加浮动后由文本内容决定宽度 */
+        .right {
+            height: 250px;
+            background-color: purple;
+        }
+
+        .test1 {
+            background-color: green;
+        }
+
+        .test2 {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left">1</div>
+    <div class="right">2</div>
+    <div class="test1">3</div>
+    <div class="test2">4</div>
+</body>
+
+</html>

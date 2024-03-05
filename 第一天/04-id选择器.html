@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 以#开头定义 */
+        /* 和类选择器的区别：只能调用一次，别人请勿使用 */
+        #pink {
+            color: pink;
+        }
+
+        #font35 {
+            font-size: 35px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="pink">迈克尔·杰克逊</div>
+    <!-- 一个组件只能有一个id，不能调用两个 -->
+    <!-- 下面这个可以 -->
+    <div id="font35">pink</div>
+
+    <!-- 但这个不行 -->
+    <div id="pink font35">pink</div>
+
+    <!-- 这是跟类选择器最大的区别！ -->
+
+</body>
+</html>

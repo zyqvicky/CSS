@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+        }
+
+        .logo {
+            display: block;
+            width: 55px;
+            height: 55px;
+            overflow: hidden;
+            background-color: #ff6700;
+            text-align: left;
+            /* 用来隐藏文本 */
+            text-indent: -9999em;
+        }
+
+        .logo::before {
+            /* 定位 */
+            position: absolute;
+            /* 伪元素必须要设置content属性 */
+            content: '';
+            /* 左偏移 */
+            left: 0;
+            /* 上偏移 */
+            top: 0;
+            width: 55px;
+            height: 55px;
+            /* 设置过渡 */
+            transition: all .3s;
+            /* 背景图片 */
+            background: url(mi-logo.png) no-repeat center center;
+            /* 透明度 */
+            opacity: 1;
+        }
+
+        .logo::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 55px;
+            height: 55px;
+            transition: all .3s;
+            background: url(mi-home.png) no-repeat center center;
+            margin-left: -55px;
+            opacity: 0;
+        }
+
+        /* 鼠标移入 让mi logo 往右侧进行滑动 */
+
+        .logo:hover::before {
+            opacity: 0;
+            margin-left: 55px;
+        }
+
+        /* 鼠标移入 让mi home 回到盒子中间 */
+
+        .logo:hover::after {
+            opacity: 1;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="" class="logo" title="小米官网">小米官网</a>
+    </div>
+</body>
+
+</html>

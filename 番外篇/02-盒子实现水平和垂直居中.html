@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+            /* 1、带百分号参数 移动的距离是 盒子自身的宽度或者高度来对比的
+            transform: translateX(50%); */
+        }
+
+        /* 让p水平、垂直居中 */
+        p {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            background-color: skyblue;
+            /* 盒子往上走自己的高度的一半 往左走宽度的一半 */
+            transform: translate(-50%, -50%);
+        }
+
+        /* span {
+            /* translate对于行内元素是无效的 */
+            /* transform: translate(300px, 300px); }*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+    <span>123</span>
+</body>
+
+</html>
